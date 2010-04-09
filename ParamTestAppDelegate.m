@@ -52,9 +52,10 @@
 {
     NSString* myString = @"Hello";    
     DLog(@"  myString = %qx description = %@", myString, myString);
-    // address where pointer value is stored
+    
     DLog(@"address where pointer value is stored");
     DLog(@" &myString = %qx", &myString);
+    
     // dereference address to get back to myString.  myString == *&myString
     DLog(@"dereferenced address");
     DLog(@"*&myString = %qx description = %@", *&myString, *&myString);
