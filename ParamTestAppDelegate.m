@@ -21,14 +21,15 @@
 
 - (void)playWithIntegerParameter:(NSInteger)integerParameter
 {
-    DLog(@"integerParameter = %d", integerParameter);
+    DLog(@"integerParameter = %5d", integerParameter);
     
     // change parameter value.  This seems like it could create confusion
     integerParameter += 1;
-    DLog(@"integerParameter = %d", integerParameter);
+    DLog(@"integerParameter = %5d", integerParameter);
     
     integerParameter = 99;
-    DLog(@"integerParameter = %d", integerParameter);
+    DLog(@"integerParameter = %5d", integerParameter);
+    DLog();
     
     // error - 'integerParameter' redeclared as different kind of symbol
     // NSInteger integerParameter = 3;    
@@ -37,15 +38,30 @@
 
 - (void)playWithObject
 {
-    NSObject* myObject = [[NSObject alloc] init];    
+    NSObject* myObject = [[NSObject alloc] init];
+    DLog(@"myObject is a pointer to an object.");
+    DLog(@"myObject's value is the address where the object is stored.");
     DLog(@"myObject = %qx \t description = %@", myObject, myObject);
+    DLog();
     
     [myObject release];
     myObject = nil;
 }
 
+- (void)playWithString
+{
+    NSString* myString = @"Hello";    
+    DLog(@"myString = \t %qx \t description = %@", myString, myString);
+    
+    // address where pointer value is stored
+    DLog(@"address where pointer value is stored &myString = %qx", &myString);
+    // dereference address to get back to myString.  myString == *&myString
+    DLog(@"dereferenced address *&myString = \t %qx \t description = %@", *&myString, *&myString);
+    DLog();
+}
 
-- (void)playWithObjects
+
+- (void)playWithStrings
 {
     // In Objective-C, objects are referenced by pointer values
     // "larry" is a pointer, its hex value is a memory address
@@ -70,6 +86,7 @@
     DLog(@"curly = \t %qx \t description = %@", curly, curly);    
 
     [larry release], larry = nil;
+    DLog();
 }
 
 
@@ -87,7 +104,8 @@
 {
     [self playWithIntegerParameter:5];
     [self playWithObject];
-    [self playWithObjects];
+    [self playWithString];
+    [self playWithStrings];
 
     NSString* sillyString = @"I'm a silly string";
     DLog(@"sillyString = \t\t %qx \t description = %@", sillyString, sillyString);    
