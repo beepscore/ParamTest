@@ -41,22 +41,23 @@
     NSObject* myObject = [[NSObject alloc] init];
     DLog(@"myObject is a pointer to an object.");
     DLog(@"myObject's value is the address where the object is stored.");
-    DLog(@"myObject = %qx \t description = %@", myObject, myObject);
+    DLog(@"myObject = %qx description = %@", myObject, myObject);
+    DLog(@"myObject release and nil");
+    [myObject release], myObject = nil;
+    DLog(@"myObject = %9qx description = %@", myObject, myObject);
     DLog();
-    
-    [myObject release];
-    myObject = nil;
 }
 
 - (void)playWithString
 {
     NSString* myString = @"Hello";    
-    DLog(@"myString = \t %qx \t description = %@", myString, myString);
-    
+    DLog(@"  myString = %qx description = %@", myString, myString);
     // address where pointer value is stored
-    DLog(@"address where pointer value is stored &myString = %qx", &myString);
+    DLog(@"address where pointer value is stored");
+    DLog(@" &myString = %qx", &myString);
     // dereference address to get back to myString.  myString == *&myString
-    DLog(@"dereferenced address *&myString = \t %qx \t description = %@", *&myString, *&myString);
+    DLog(@"dereferenced address");
+    DLog(@"*&myString = %qx description = %@", *&myString, *&myString);
     DLog();
 }
 
@@ -67,23 +68,23 @@
     // "larry" is a pointer, its hex value is a memory address
     // larry points to an NSString
     NSString* larry = [[NSString alloc] initWithString:@"My name is Larry"];    
-    DLog(@"larry = \t %qx \t description = %@", larry, larry);
+    DLog(@"larry = %qx description = %@", larry, larry);
  
     // "moe" is a pointer, points to an NSString
     NSString* moe = [[NSString alloc] initWithString:@"My name is Moe"];    
-    DLog(@"moe = \t %qx \t description = %@", moe, moe);
+    DLog(@"  moe = %qx description = %@", moe, moe);
     
-    [moe release];
-    moe = nil;
-    DLog(@"moe = \t %9qx \t description = %@", moe, moe);
+    DLog(@"moe release and nil");
+    [moe release], moe = nil;
+    DLog(@"  moe = %9qx description = %@", moe, moe);
     
     moe = larry;
-    DLog(@"moe = \t %qx \t description = %@", moe, moe);
+    DLog(@"  moe = %qx description = %@", moe, moe);
  
     // "curly" is a pointer
     // we aren't allocating memory for an object, and don't need to release curly.
     NSString* curly = larry;   
-    DLog(@"curly = \t %qx \t description = %@", curly, curly);    
+    DLog(@"curly = %qx description = %@", curly, curly);  
 
     [larry release], larry = nil;
     DLog();
@@ -92,11 +93,12 @@
 
 - (void)playWithObjectParameter:(NSObject*)anObject
 {
-    DLog(@"anObject = %qx \t description = %@", anObject, anObject);    
+    DLog(@"anObject = %qx description = %@", anObject, anObject);    
     
-    // change parameter value.  This seems like it could create confusion
+    // Re-assign parameter.
     anObject = @"Now I am serious";
-    DLog(@"anObject = %qx \t description = %@", anObject, anObject);    
+    //   Now anObject points to a different address.
+    DLog(@"anObject = %qx description = %@", anObject, anObject);    
 }
 
 
@@ -108,9 +110,9 @@
     [self playWithStrings];
 
     NSString* sillyString = @"I'm a silly string";
-    DLog(@"sillyString = \t\t %qx \t description = %@", sillyString, sillyString);    
+    DLog(@"sillyString = \t\t %qx description = %@", sillyString, sillyString);    
     [self playWithObjectParameter:sillyString];
-    DLog(@"sillyString = \t\t %qx \t description = %@", sillyString, sillyString);    
+    DLog(@"sillyString = \t\t %qx description = %@", sillyString, sillyString);    
 }
 
 @end
