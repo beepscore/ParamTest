@@ -15,6 +15,7 @@
 @property (assign) IBOutlet NSWindow *window;
 
 - (IBAction)handleIntegerFun:(id)sender;
+- (IBAction)handleChangeIntegerFun:(id)sender;
 - (IBAction)handleObjectFun:(id)sender;
 - (IBAction)handleStringFun:(id)sender;
 - (IBAction)handleParameterFun:(id)sender;

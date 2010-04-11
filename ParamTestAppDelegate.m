@@ -36,8 +36,20 @@
 }
 
 
+// Ref http://www.cocoadev.com/index.pl?HowToUsePointers
+- (void)changeIntegerAtAddress:(NSInteger *)aPointer
+{
+    DLog(@"aPointer points to address = %qx", aPointer);
+    DLog(@"*aPointer = %d", *aPointer);
+    *aPointer = 7;
+    DLog(@"*aPointer = %d", *aPointer);
+    DLog();
+}
+
+
 - (void)playWithObject
 {
+    // Ref http://forums.macrumors.com/showthread.php?t=625899
     NSObject* myObject = [[NSObject alloc] init];
     DLog(@"myObject is a pointer variable that points to an object.");
     DLog(@"myObject's value is the address where the object is stored.");
@@ -125,11 +137,25 @@
     DLog();
 }
 
-
+# pragma mark UI
 - (IBAction)handleIntegerFun:(id)sender
 {
     [self playWithIntegerParameter:5];
 }
+
+
+- (IBAction)handleChangeIntegerFun:(id)sender
+{
+    NSInteger myInteger = 3;
+    DLog(@"myInteger stored at address = %qx", &myInteger);
+    DLog(@"myInteger = %d", myInteger);    
+    
+    [self changeIntegerAtAddress:&myInteger];
+    
+    // method changed the value of the argument
+    DLog(@"myInteger = %d", myInteger);    
+}
+
 
 
 - (IBAction)handleObjectFun:(id)sender
@@ -164,5 +190,6 @@
     DLog(@"sillyString points to address = %qx", sillyString);    
     DLog(@"sillyString points to object with description = %@", sillyString);    
 }
+
 
 @end
