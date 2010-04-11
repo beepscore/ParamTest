@@ -14,7 +14,9 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
-
-- (IBAction)handleGoButton:(id)sender;
+- (IBAction)handleIntegerFun:(id)sender;
+- (IBAction)handleObjectFun:(id)sender;
+- (IBAction)handleStringFun:(id)sender;
+- (IBAction)handleParameterFun:(id)sender;
 
 @end

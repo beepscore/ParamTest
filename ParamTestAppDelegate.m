@@ -39,25 +39,27 @@
 - (void)playWithObject
 {
     NSObject* myObject = [[NSObject alloc] init];
-    DLog(@"myObject is a pointer to an object.");
+    DLog(@"myObject is a pointer variable that points to an object.");
     DLog(@"myObject's value is the address where the object is stored.");
-    DLog(@"myObject = %qx description = %@", myObject, myObject);
+    DLog(@"myObject stored at address &myObject = %qx", &myObject);    
+    DLog(@"myObject points to address = %qx", myObject);    
+    DLog(@"myObject points to object with description = %@", myObject);    
     DLog(@"myObject release and nil");
     [myObject release], myObject = nil;
-    DLog(@"myObject = %9qx description = %@", myObject, myObject);
+    DLog(@"myObject stored at address &myObject = %qx", &myObject);    
+    DLog(@"myObject points to address = %qx", myObject);    
+    DLog(@"myObject points to object with description = %@", myObject);    
     DLog();
 }
 
 - (void)playWithString
 {
     NSString* myString = @"Hello";    
-    DLog(@"  myString = %qx description = %@", myString, myString);
-    
-    DLog(@"address where pointer value is stored");
-    DLog(@" &myString = %qx", &myString);
-    
+    DLog(@"myString stored at address &myString = %qx", &myString);    
+    DLog(@"myString points to address = %qx", myString);    
+    DLog(@"myString points to object with description = %@", myString);    
+
     // dereference address to get back to myString.  myString == *&myString
-    DLog(@"dereferenced address");
     DLog(@"*&myString = %qx description = %@", *&myString, *&myString);
     DLog();
 }
@@ -96,12 +98,16 @@
 {
     // The calling message passed an argument.
     // Local parameter anObject points to the same address as the argument.     
-    DLog(@"anObject = %qx description = %@", anObject, anObject);    
+    DLog(@"anObject stored at address &anObject = %qx", &anObject);    
+    DLog(@"anObject points to address = %qx", anObject);    
+    DLog(@"anObject points to object with description = %@", anObject);    
     
     // Re-assign parameter.  This doesn't change value of the calling message's argument.
     anObject = @"Now I am serious";
     // Now anObject points to a different address.
-    DLog(@"anObject = %qx description = %@", anObject, anObject);    
+    DLog(@"anObject stored at address &anObject = %qx", &anObject);    
+    DLog(@"anObject points to address = %qx", anObject);    
+    DLog(@"anObject points to object with description = %@", anObject);    
     DLog();
 }
 
@@ -120,23 +126,43 @@
 }
 
 
-- (IBAction)handleGoButton:(id)sender
+- (IBAction)handleIntegerFun:(id)sender
 {
     [self playWithIntegerParameter:5];
+}
+
+
+- (IBAction)handleObjectFun:(id)sender
+{
     [self playWithObject];
+}
+
+
+- (IBAction)handleStringFun:(id)sender
+{
     [self playWithString];
     [self playWithStrings];
+}
 
+
+- (IBAction)handleParameterFun:(id)sender
+{
     NSString* sillyString = @"I'm a silly string";
-    DLog(@"sillyString = \t\t %qx description = %@", sillyString, sillyString);    
+    DLog(@"sillyString stored at address &sillyString = %qx", &sillyString);    
+    DLog(@"sillyString points to address = %qx", sillyString);    
+    DLog(@"sillyString points to object with description = %@", sillyString);    
     [self playWithObjectParameter:sillyString];
     // method did not change the value of the argument
-    DLog(@"sillyString = \t\t %qx description = %@", sillyString, sillyString);    
-
+    DLog(@"sillyString stored at address &sillyString = %qx", &sillyString);    
+    DLog(@"sillyString points to address = %qx", sillyString);    
+    DLog(@"sillyString points to object with description = %@", sillyString);    
+    
     // send argument to receiver
     [self playWithScopeOfParameter:sillyString];
     // method did not change the value of the argument
-    DLog(@"sillyString = \t\t %qx description = %@", sillyString, sillyString);    
+    DLog(@"sillyString stored at address &sillyString = %qx", &sillyString);    
+    DLog(@"sillyString points to address = %qx", sillyString);    
+    DLog(@"sillyString points to object with description = %@", sillyString);    
 }
 
 @end
