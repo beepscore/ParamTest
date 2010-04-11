@@ -94,12 +94,29 @@
 
 - (void)playWithObjectParameter:(NSObject*)anObject
 {
+    // The calling message passed an argument.
+    // Local parameter anObject points to the same address as the argument.     
     DLog(@"anObject = %qx description = %@", anObject, anObject);    
     
-    // Re-assign parameter.
+    // Re-assign parameter.  This doesn't change value of the calling message's argument.
     anObject = @"Now I am serious";
-    //   Now anObject points to a different address.
+    // Now anObject points to a different address.
     DLog(@"anObject = %qx description = %@", anObject, anObject);    
+    DLog();
+}
+
+
+- (void)playWithScopeOfParameter:(NSObject*)sillyString
+{
+    // The calling message passed an argument.
+    // Local parameter sillyString points to the same address as the argument.     
+    DLog(@"sillyString = %qx description = %@", sillyString, sillyString);    
+    
+    // Re-assign parameter.  This doesn't change value of the calling message's argument.
+    sillyString = @"Now I am serious";
+    // Now sillyString points to a different address.
+    DLog(@"sillyString = %qx description = %@", sillyString, sillyString);    
+    DLog();
 }
 
 
@@ -113,6 +130,12 @@
     NSString* sillyString = @"I'm a silly string";
     DLog(@"sillyString = \t\t %qx description = %@", sillyString, sillyString);    
     [self playWithObjectParameter:sillyString];
+    // method did not change the value of the argument
+    DLog(@"sillyString = \t\t %qx description = %@", sillyString, sillyString);    
+
+    // send argument to receiver
+    [self playWithScopeOfParameter:sillyString];
+    // method did not change the value of the argument
     DLog(@"sillyString = \t\t %qx description = %@", sillyString, sillyString);    
 }
 
