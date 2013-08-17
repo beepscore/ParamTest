@@ -22,15 +22,21 @@
 
     NSLog(@"myObject is stored at address myObject = %p", myObject);
     NSString *myObjectAddressAsString = [NSString stringWithFormat:@"%p", myObject];
+    
     // myObject description includes the address
+    // <NSObject: 0x71524f0>
     NSString *myObjectDescription = [myObject description];
     NSLog(@"myObject description %@", myObjectDescription);
 
-    NSRange addressRange = NSMakeRange(11, 9);
-    NSString *myObjectDescriptionSubstring = [myObjectDescription substringWithRange:addressRange];
+    NSString *myObjectDescriptionEnd = [myObjectDescription
+                                        stringByReplacingOccurrencesOfString:@"<NSObject: "
+                                        withString:@""];
 
-    STAssertEqualObjects(myObjectAddressAsString, myObjectDescriptionSubstring,
-                         @"expected %@ but got %@", myObjectAddressAsString, myObjectDescriptionSubstring);
+    NSString *myObjectAddressStringFromDescription = [myObjectDescriptionEnd
+                                                      stringByReplacingOccurrencesOfString:@">" withString:@""];
+    
+    STAssertEqualObjects(myObjectAddressAsString, myObjectAddressStringFromDescription,
+                         @"expected %@ but got %@", myObjectAddressAsString, myObjectAddressStringFromDescription);
 }
 
 - (void)testNil {
