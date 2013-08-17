@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'ParamTest' target in the 'ParamTest' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
