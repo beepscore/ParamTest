@@ -83,9 +83,9 @@
     // myObject's value is the address where the object is stored
     NSObject* myObject = [[NSObject alloc] init];
 
-    NSLog(@"myObject pointer is stored at address &myObject = %p", &myObject);
+    NSLog(@"myObject pointer is stored at address &myObject: %p", &myObject);
     
-    NSLog(@"myObject is stored at address myObject = %p", myObject);
+    NSLog(@"myObject is stored at address myObject: %p", myObject);
     NSString *myObjectAddressAsString = [NSString stringWithFormat:@"%p", myObject];
     
     // myObject description includes the address
@@ -117,9 +117,9 @@
     // myObject's value is the address where the object is stored
     NSObject* myObject = @"Hello";
 
-    NSLog(@"myObject pointer is stored at address &myObject = %p", &myObject);
+    NSLog(@"myObject pointer is stored at address &myObject: %p", &myObject);
     
-    NSLog(@"myObject is stored at address myObject = %p", myObject);
+    NSLog(@"myObject is stored at address myObject: %p", myObject);
     
     // For an NSString, description is the string
     NSString *myObjectDescription = [myObject description];
