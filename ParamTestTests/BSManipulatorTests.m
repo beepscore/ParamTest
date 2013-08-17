@@ -52,12 +52,6 @@
 }
 
 /*
- - (void)testStringFun:(id)sender
-{
-    [self playWithString];
-    [self playWithStrings];
-}
-
 
 - (void)testParameterFun:(id)sender
 {
