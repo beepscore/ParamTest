@@ -73,7 +73,6 @@
 		DE4872F617BF602C00DAF454 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DE4872FE17BF602C00DAF454 /* ParamTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParamTestTests-Info.plist"; sourceTree = "<group>"; };
 		DE48730017BF602C00DAF454 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DE48730217BF602C00DAF454 /* ParamTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParamTestTests.h; sourceTree = "<group>"; };
 		DE48730317BF602C00DAF454 /* ParamTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParamTestTests.m; sourceTree = "<group>"; };
 		DEB394B8116FBC65001691C8 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,7 +223,6 @@
 		DE4872FC17BF602C00DAF454 /* ParamTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				DE48730217BF602C00DAF454 /* ParamTestTests.h */,
 				DE48730317BF602C00DAF454 /* ParamTestTests.m */,
 				DE4872FD17BF602C00DAF454 /* Supporting Files */,
 			);
@@ -676,6 +674,7 @@
 				DE48730617BF602C00DAF454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE48730A17BF602C00DAF454 /* Build configuration list for PBXNativeTarget "ParamTestTests" */ = {
 			isa = XCConfigurationList;
@@ -684,6 +683,7 @@
 				DE48730817BF602C00DAF454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

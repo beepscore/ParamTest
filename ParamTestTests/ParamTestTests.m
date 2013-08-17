@@ -6,7 +6,10 @@
 //
 //
 
-#import "ParamTestTests.h"
+#import <SenTestingKit/SenTestingKit.h>
+
+@interface ParamTestTests : SenTestCase
+@end
 
 @implementation ParamTestTests
 
