@@ -12,6 +12,9 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		DE341BB317BF65ED00819600 /* BSManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = DE341BB217BF65ED00819600 /* BSManipulator.m */; };
+		DE341BB417BF65ED00819600 /* BSManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = DE341BB217BF65ED00819600 /* BSManipulator.m */; };
+		DE341BB517BF65ED00819600 /* BSManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = DE341BB217BF65ED00819600 /* BSManipulator.m */; };
 		DE4872D317BF602B00DAF454 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4872D217BF602B00DAF454 /* UIKit.framework */; };
 		DE4872D517BF602B00DAF454 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4872D417BF602B00DAF454 /* Foundation.framework */; };
 		DE4872D717BF602B00DAF454 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4872D617BF602B00DAF454 /* CoreGraphics.framework */; };
@@ -27,7 +30,8 @@
 		DE4872F817BF602C00DAF454 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4872D217BF602B00DAF454 /* UIKit.framework */; };
 		DE4872F917BF602C00DAF454 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4872D417BF602B00DAF454 /* Foundation.framework */; };
 		DE48730117BF602C00DAF454 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE4872FF17BF602C00DAF454 /* InfoPlist.strings */; };
-		DE48730417BF602C00DAF454 /* ParamTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE48730317BF602C00DAF454 /* ParamTestTests.m */; };
+		DE48730417BF602C00DAF454 /* BSManipulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE48730317BF602C00DAF454 /* BSManipulatorTests.m */; };
+		DE9A1C3917BF84D100F8E203 /* ParamTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9A1C3817BF83D400F8E203 /* ParamTestTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* ParamTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ParamTest-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ParamTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParamTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE341BB117BF65ED00819600 /* BSManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSManipulator.h; sourceTree = "<group>"; };
+		DE341BB217BF65ED00819600 /* BSManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSManipulator.m; sourceTree = "<group>"; };
 		DE4872D117BF602B00DAF454 /* ParamTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParamTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4872D217BF602B00DAF454 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DE4872D417BF602B00DAF454 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -73,7 +79,8 @@
 		DE4872F617BF602C00DAF454 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DE4872FE17BF602C00DAF454 /* ParamTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParamTestTests-Info.plist"; sourceTree = "<group>"; };
 		DE48730017BF602C00DAF454 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DE48730317BF602C00DAF454 /* ParamTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParamTestTests.m; sourceTree = "<group>"; };
+		DE48730317BF602C00DAF454 /* BSManipulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSManipulatorTests.m; sourceTree = "<group>"; };
+		DE9A1C3817BF83D400F8E203 /* ParamTestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamTestTests.m; sourceTree = "<group>"; };
 		DEB394B8116FBC65001691C8 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +206,8 @@
 				DE4872E117BF602B00DAF454 /* AppDelegate.h */,
 				DE4872E217BF602B00DAF454 /* AppDelegate.m */,
 				DE4872EA17BF602C00DAF454 /* MainStoryboard.storyboard */,
+				DE341BB117BF65ED00819600 /* BSManipulator.h */,
+				DE341BB217BF65ED00819600 /* BSManipulator.m */,
 				DE4872ED17BF602C00DAF454 /* ViewController.h */,
 				DE4872EE17BF602C00DAF454 /* ViewController.m */,
 				DE4872D917BF602B00DAF454 /* Supporting Files */,
@@ -223,7 +232,8 @@
 		DE4872FC17BF602C00DAF454 /* ParamTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				DE48730317BF602C00DAF454 /* ParamTestTests.m */,
+				DE48730317BF602C00DAF454 /* BSManipulatorTests.m */,
+				DE9A1C3817BF83D400F8E203 /* ParamTestTests.m */,
 				DE4872FD17BF602C00DAF454 /* Supporting Files */,
 			);
 			path = ParamTestTests;
@@ -380,6 +390,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* ParamTestAppDelegate.m in Sources */,
+				DE341BB517BF65ED00819600 /* BSManipulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +401,7 @@
 				DE4872DF17BF602B00DAF454 /* main.m in Sources */,
 				DE4872E317BF602B00DAF454 /* AppDelegate.m in Sources */,
 				DE4872EF17BF602C00DAF454 /* ViewController.m in Sources */,
+				DE341BB317BF65ED00819600 /* BSManipulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +409,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE48730417BF602C00DAF454 /* ParamTestTests.m in Sources */,
+				DE48730417BF602C00DAF454 /* BSManipulatorTests.m in Sources */,
+				DE341BB417BF65ED00819600 /* BSManipulator.m in Sources */,
+				DE9A1C3917BF84D100F8E203 /* ParamTestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
