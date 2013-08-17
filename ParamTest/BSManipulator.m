@@ -44,19 +44,4 @@
     return anObject;
 }
 
-/*
-
-- (void)playWithScopeOfParameter:(NSObject*)sillyString
-{
-    // The calling message passed an argument.
-    // Local parameter sillyString points to the same address as the argument.
-    NSLog(@"sillyString = %qx description = %@", sillyString, sillyString);
-
-    // Re-assign parameter.  This doesn't change value of the calling message's argument.
-    sillyString = @"Now I am serious";
-    // Now sillyString points to a different address.
-    NSLog(@"sillyString = %qx description = %@", sillyString, sillyString);
-}
- 
-*/
 @end
