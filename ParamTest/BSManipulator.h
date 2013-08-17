@@ -14,4 +14,6 @@
 
 - (void)changeIntegerAtAddressToSeven:(NSInteger *)aPointer;
 
+- (NSObject *)reassignParameterToStringHello:(NSObject *)anObject;
+
 @end

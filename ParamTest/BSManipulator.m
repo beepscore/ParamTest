@@ -22,27 +22,29 @@
     // aPointer points to a value of type NSInteger
     // below, '*' dereferences the pointer
     // set the value at the address aPointer points to
+    // this changes the value within the caller's scope
     *aPointer = 7;
 }
 
-/*
 
-- (void)playWithObjectParameter:(NSObject*)anObject
-{
+- (NSObject *)reassignParameterToStringHello:(NSObject *)anObject {
+
     // The calling message passed an argument.
     // Local parameter anObject points to the same address as the argument.
-    NSLog(@"anObject stored at address &anObject = %qx", &anObject);
-    NSLog(@"anObject points to address = %qx", anObject);
-    NSLog(@"anObject points to object with description = %@", anObject);
 
-    // Re-assign parameter.  This doesn't change value of the calling message's argument.
-    anObject = @"Now I am serious";
-    // Now anObject points to a different address.
-    NSLog(@"anObject stored at address &anObject = %qx", &anObject);
-    NSLog(@"anObject points to address = %qx", anObject);
-    NSLog(@"anObject points to object with description = %@", anObject);
+    // Re-assign parameter.
+    // This changes value within scope of this method only.
+    // This doesn't change value of argument within the caller's scope.
+    // To change value within caller's scope,
+    // caller would have to pass an address for us to dereference.
+    // However, it would be clearer/more goof proof to use a new variable to return.
+    anObject = @"Hello";
+
+    // Now anObject points to a different address than the argument.
+    return anObject;
 }
 
+/*
 
 - (void)playWithScopeOfParameter:(NSObject*)sillyString
 {
