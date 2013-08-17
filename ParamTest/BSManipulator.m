@@ -27,18 +27,6 @@
 
 /*
 
-- (void)playWithString
-{
-    NSString* myString = @"Hello";
-    NSLog(@"myString stored at address &myString = %qx", &myString);
-    NSLog(@"myString points to address = %qx", myString);
-    NSLog(@"myString points to object with description = %@", myString);
-
-    // dereference address to get back to myString.  myString == *&myString
-    NSLog(@"*&myString = %qx description = %@", *&myString, *&myString);
-}
-
-
 - (void)playWithStrings
 {
     // In Objective-C, objects are referenced by pointer values
