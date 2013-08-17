@@ -62,21 +62,21 @@
 - (void)testParameterFun:(id)sender
 {
     NSString* sillyString = @"I'm a silly string";
-    DLog(@"sillyString stored at address &sillyString = %qx", &sillyString);
-    DLog(@"sillyString points to address = %qx", sillyString);
-    DLog(@"sillyString points to object with description = %@", sillyString);
+    NSLog(@"sillyString stored at address &sillyString = %qx", &sillyString);
+    NSLog(@"sillyString points to address = %qx", sillyString);
+    NSLog(@"sillyString points to object with description = %@", sillyString);
     [self playWithObjectParameter:sillyString];
     // method did not change the value of the argument
-    DLog(@"sillyString stored at address &sillyString = %qx", &sillyString);
-    DLog(@"sillyString points to address = %qx", sillyString);
-    DLog(@"sillyString points to object with description = %@", sillyString);
+    NSLog(@"sillyString stored at address &sillyString = %qx", &sillyString);
+    NSLog(@"sillyString points to address = %qx", sillyString);
+    NSLog(@"sillyString points to object with description = %@", sillyString);
 
     // send argument to receiver
     [self playWithScopeOfParameter:sillyString];
     // method did not change the value of the argument
-    DLog(@"sillyString stored at address &sillyString = %qx", &sillyString);
-    DLog(@"sillyString points to address = %qx", sillyString);
-    DLog(@"sillyString points to object with description = %@", sillyString);
+    NSLog(@"sillyString stored at address &sillyString = %qx", &sillyString);
+    NSLog(@"sillyString points to address = %qx", sillyString);
+    NSLog(@"sillyString points to object with description = %@", sillyString);
 }
 */
 

@@ -81,7 +81,6 @@
 		DE48730017BF602C00DAF454 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE48730317BF602C00DAF454 /* BSManipulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSManipulatorTests.m; sourceTree = "<group>"; };
 		DE9A1C3817BF83D400F8E203 /* ParamTestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamTestTests.m; sourceTree = "<group>"; };
-		DEB394B8116FBC65001691C8 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +118,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DEB394B8116FBC65001691C8 /* Debug.h */,
 				256AC3D80F4B6AC300CF3369 /* ParamTestAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* ParamTestAppDelegate.m */,
 			);
