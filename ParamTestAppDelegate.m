@@ -21,14 +21,14 @@
 
 - (void)playWithIntegerParameter:(NSInteger)integerParameter
 {
-    DLog(@"integerParameter = %5d", integerParameter);
+    DLog(@"integerParameter = %5ld", (long)integerParameter);
     
     // change parameter value.  This seems like it could create confusion
     integerParameter += 1;
-    DLog(@"integerParameter = %5d", integerParameter);
+    DLog(@"integerParameter = %5ld", (long)integerParameter);
     
     integerParameter = 99;
-    DLog(@"integerParameter = %5d", integerParameter);
+    DLog(@"integerParameter = %5ld", (long)integerParameter);
     DLog();
     
     // error - 'integerParameter' redeclared as different kind of symbol
