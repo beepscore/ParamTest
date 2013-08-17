@@ -27,34 +27,6 @@
 
 /*
 
-- (void)playWithStrings
-{
-    // In Objective-C, objects are referenced by pointer values
-    // "larry" is a pointer, its hex value is a memory address
-    // larry points to an NSString
-    NSString* larry = [[NSString alloc] initWithString:@"My name is Larry"];
-    NSLog(@"larry = %qx description = %@", larry, larry);
-
-    // "moe" is a pointer, points to an NSString
-    NSString* moe = [[NSString alloc] initWithString:@"My name is Moe"];
-    NSLog(@"  moe = %qx description = %@", moe, moe);
-
-    NSLog(@"moe nil");
-    moe = nil;
-    NSLog(@"  moe = %9qx description = %@", moe, moe);
-
-    moe = larry;
-    NSLog(@"  moe = %qx description = %@", moe, moe);
-
-    // "curly" is a pointer
-    // we aren't allocating memory for an object, and system doesn't need to release curly.
-    NSString* curly = larry;
-    NSLog(@"curly = %qx description = %@", curly, curly);
-
-    larry = nil;
-}
-
-
 - (void)playWithObjectParameter:(NSObject*)anObject
 {
     // The calling message passed an argument.
