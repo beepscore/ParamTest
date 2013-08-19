@@ -25,6 +25,10 @@
 		DE4872F917BF602C00DAF454 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4872D417BF602B00DAF454 /* Foundation.framework */; };
 		DE48730117BF602C00DAF454 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE4872FF17BF602C00DAF454 /* InfoPlist.strings */; };
 		DE48730417BF602C00DAF454 /* BSManipulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE48730317BF602C00DAF454 /* BSManipulatorTests.m */; };
+		DE4EB3CB17C28044007A59E5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DE4EB3C817C28025007A59E5 /* LICENSE */; };
+		DE4EB3CC17C28045007A59E5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DE4EB3C817C28025007A59E5 /* LICENSE */; };
+		DE4EB3CE17C280B9007A59E5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DE4EB3CD17C280B9007A59E5 /* README.md */; };
+		DE4EB3CF17C280B9007A59E5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DE4EB3CD17C280B9007A59E5 /* README.md */; };
 		DE9A1C3917BF84D100F8E203 /* ParamTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9A1C3817BF83D400F8E203 /* ParamTestTests.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,8 @@
 		DE4872FE17BF602C00DAF454 /* ParamTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParamTestTests-Info.plist"; sourceTree = "<group>"; };
 		DE48730017BF602C00DAF454 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE48730317BF602C00DAF454 /* BSManipulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSManipulatorTests.m; sourceTree = "<group>"; };
+		DE4EB3C817C28025007A59E5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DE4EB3CD17C280B9007A59E5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		DE9A1C3817BF83D400F8E203 /* ParamTestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamTestTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +129,8 @@
 		29B97314FDCFA39411CA2CEA /* ParamTest */ = {
 			isa = PBXGroup;
 			children = (
+				DE4EB3CD17C280B9007A59E5 /* README.md */,
+				DE4EB3C817C28025007A59E5 /* LICENSE */,
 				DE4872D817BF602B00DAF454 /* ParamTest */,
 				DE4872FC17BF602C00DAF454 /* ParamTestTests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -270,6 +278,8 @@
 				DE4872E717BF602C00DAF454 /* Default@2x.png in Resources */,
 				DE4872E917BF602C00DAF454 /* Default-568h@2x.png in Resources */,
 				DE4872EC17BF602C00DAF454 /* MainStoryboard.storyboard in Resources */,
+				DE4EB3CB17C28044007A59E5 /* LICENSE in Resources */,
+				DE4EB3CE17C280B9007A59E5 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE48730117BF602C00DAF454 /* InfoPlist.strings in Resources */,
+				DE4EB3CC17C28045007A59E5 /* LICENSE in Resources */,
+				DE4EB3CF17C280B9007A59E5 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
